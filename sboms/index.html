@@ -2,19 +2,46 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SBOMs - APK Repository</title>
   <style>
-    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+    body { font-family: system-ui, sans-serif; max-width: 900px; margin: 40px auto; padding: 20px; }
+    h1 { color: #333; }
     .back-link { margin-bottom: 20px; }
-    a { color: #0366d6; }
+    .file-list { background: #f5f5f5; padding: 20px; border-radius: 8px; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; padding: 10px; background: white; border-radius: 4px; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #e8e8e8; padding: 2px 6px; border-radius: 3px; }
+    .file-size { color: #666; font-size: 0.9em; }
   </style>
 </head>
 <body>
   <div class="back-link"><a href="../">← Back to repository root</a></div>
   <h1>📋 SBOMs</h1>
-  <p>Software Bill of Materials (SPDX format)</p>
-  <ul>
-              <li><em>No SBOMs available yet. SBOMs will appear here after the first successful build.</em></li>
-  </ul>
+  <p>Software Bill of Materials (SBOM) for the container and packages</p>
+  <div class="file-list">
+    <h2>Available SBOMs:</h2>
+    <ul>
+                <li><a href="container-sbom.spdx.json">📄 container-sbom.spdx.json</a> <span class="file-size">(231K)</span></li>
+                <li><a href="container-sbom.cyclonedx.json">📄 container-sbom.cyclonedx.json</a> <span class="file-size">(117K)</span></li>
+    </ul>
+  </div>
+  <div style="margin-top: 30px; padding: 20px; background: #e8f4f8; border-radius: 8px;">
+    <h3>📖 About SBOMs</h3>
+    <p>SBOMs (Software Bill of Materials) provide a complete inventory of all software components in the container, including:</p>
+    <ul>
+      <li>Base image packages</li>
+      <li>Installed APK packages</li>
+      <li>All transitive dependencies</li>
+      <li>Version information and metadata</li>
+    </ul>
+    <p><strong>Formats:</strong></p>
+    <ul>
+      <li><code>.spdx.json</code> - SPDX format (JSON)</li>
+      <li><code>.cyclonedx.json</code> - CycloneDX format (JSON)</li>
+    </ul>
+  </div>
 </body>
 </html>
