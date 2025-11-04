@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>APK Repository - Supply Chain Challenge App</title>
+  <style>
+    body { font-family: system-ui, sans-serif; max-width: 800px; margin: 40px auto; padding: 20px; }
+    h1 { color: #333; }
+    .section { margin: 30px 0; padding: 20px; background: #f5f5f5; border-radius: 8px; }
+    .section h2 { margin-top: 0; color: #555; }
+    ul { list-style: none; padding: 0; }
+    li { margin: 10px 0; }
+    a { color: #0366d6; text-decoration: none; }
+    a:hover { text-decoration: underline; }
+    code { background: #e8e8e8; padding: 2px 6px; border-radius: 3px; }
+  </style>
+</head>
+<body>
+  <h1>🔐 APK Repository</h1>
+  <p>Alpine Linux APK repository for <code>supply-chain-challenge-app</code></p>
+  
+  <div class="section">
+    <h2>📦 Packages by Architecture</h2>
+    <ul>
+      <li>📁 <a href="x86_64/">x86_64/</a> - Packages for x86_64 architecture</li>
+      <li>📁 <a href="aarch64/">aarch64/</a> - Packages for ARM64 (aarch64) architecture</li>
+    </ul>
+  </div>
+  
+  <div class="section">
+    <h2>🔑 Public Keys</h2>
+    <ul>
+      <li>📁 <a href="keys/">keys/</a> - RSA public keys for package verification</li>
+    </ul>
+  </div>
+  
+  <div class="section">
+    <h2>📋 SBOMs</h2>
+    <ul>
+      <li>📁 <a href="sboms/">sboms/</a> - Software Bill of Materials (SPDX format)</li>
+    </ul>
+  </div>
+  
+  <div class="section">
+    <h2>📖 Usage</h2>
+    <p>To use this repository in Alpine Linux:</p>
+    <ol>
+      <li>Add the public key:
+        <pre><code>wget -O /etc/apk/keys/melange.rsa.pub https://lucianolacurcia.github.io/apk_repo_page/keys/melange.rsa.pub</code></pre>
+      </li>
+      <li>Add repository to <code>/etc/apk/repositories</code>:
+        <pre><code>echo "https://lucianolacurcia.github.io/apk_repo_page/x86_64" >> /etc/apk/repositories</code></pre>
+      </li>
+      <li>Update and install:
+        <pre><code>apk update
+apk add supply-chain-challenge-app</code></pre>
+      </li>
+    </ol>
+  </div>
+</body>
+</html>
